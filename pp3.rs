@@ -1,6 +1,5 @@
 use std::fmt::Write as fmtWrite;
 use std::fs::File;
-//use std::io::BufWriter;
 use std::io::Write as ioWrite;
 
 fn main() {
@@ -10,7 +9,6 @@ fn main() {
     let mut file = File::create("auto.ppm").unwrap();
 
     writeln!(&mut image, "P3\n{} {}\n255", &nx, &ny).unwrap();
-    //let mut fout = BufWriter::new(image);
     file.write_all(image.as_bytes()).unwrap();
     //println!("P3\n{} {}\n255", nx, ny);
     let mut j = ny - 1;
