@@ -1,7 +1,6 @@
 use std::fmt::Write as fmtWrite;
-use std::io::Write as ioWrite;
 use std::fs::File;
-
+use std::io::Write as ioWrite;
 
 fn main() {
     let nx = 1280;
